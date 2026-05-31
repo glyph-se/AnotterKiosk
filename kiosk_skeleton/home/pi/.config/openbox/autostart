@@ -132,3 +132,10 @@ if [ -n "${CACHE_CLEAR}" ]
 then
 	/usr/bin/cache-clear-timer "${CACHE_CLEAR}" &
 fi
+
+# if a page rotation clearing interval is specified, launch the page-rotation-timer (while true, sleep, ctrl+Tab)
+PAGE_ROTATION=$(get-ini /boot/firmware/kioskbrowser.ini browser page_rotation_interval)
+if [ -n "${PAGE_ROTATION}" ]
+then
+	/usr/bin/page-rotation-timer "${PAGE_ROTATION}" &
+fi
