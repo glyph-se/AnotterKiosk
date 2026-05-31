@@ -1,0 +1,6 @@
+#!/bin/bash
+while true
+do
+	sleep $1
+	xdotool search --onlyvisible --class "chromium" key ctrl+Tab
+done
