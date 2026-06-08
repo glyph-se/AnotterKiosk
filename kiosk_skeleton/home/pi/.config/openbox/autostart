@@ -134,7 +134,7 @@ then
 fi
 
 # if a page change interval is specified, launch the page-change-timer (while true, sleep, ctrl+Tab)
-PAGE_CHANGE=$(get-ini /boot/firmware/kioskbrowser.ini browser PAGE_CHANGE_interval)
+PAGE_CHANGE=$(get-ini /boot/firmware/kioskbrowser.ini browser page_change_interval)
 if [ -n "${PAGE_CHANGE}" ]
 then
 	/usr/bin/page-change-timer "${PAGE_CHANGE}" &
