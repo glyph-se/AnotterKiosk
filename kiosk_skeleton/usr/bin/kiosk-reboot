@@ -3,7 +3,7 @@
 SCHEDULED_TIME=$(get-ini /boot/firmware/kioskbrowser.ini reboot scheduled_time)
 
 if [ -z "${SCHEDULED_TIME}" ]; then
-    exit 1
+    exit 0
 fi
 
 TARGET_UNIXTIME=$(date -d "$SCHEDULED_TIME" +%s)
