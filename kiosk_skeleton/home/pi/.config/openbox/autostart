@@ -132,3 +132,10 @@ if [ -n "${CACHE_CLEAR}" ]
 then
 	/usr/bin/cache-clear-timer "${CACHE_CLEAR}" &
 fi
+
+# if a page change interval is specified, launch the page-change-timer (while true, sleep, ctrl+Tab)
+PAGE_CHANGE=$(get-ini /boot/firmware/kioskbrowser.ini browser page_change_interval)
+if [ -n "${PAGE_CHANGE}" ]
+then
+	/usr/bin/page-change-timer "${PAGE_CHANGE}" &
+fi

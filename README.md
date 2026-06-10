@@ -130,7 +130,6 @@ Files called `index.php` will be served as the directory index.
 This allows for a number of different mechanisms to be self-hosted, even without any network connectivity at all!
 - Local user interfaces (interaction with GPIOs, sensors, cameras, local storage, etc.)
 - Offline slideshow (folder full of JPEGs)
-- [Small iFrame application to switch between different pages on display](https://gist.github.com/Manawyrm/86f3d4a762fd5138a4ffa7ba4d180d24)
 - Custom digital signage code to download/render online info
 
 ## Inspiration / Other Kiosk-OSes:
